@@ -1,0 +1,2 @@
+random=com.sunl888.rocket.loadbalancer.RandomLoadBalancer
+roundRobin=com.sunl888.rocket.loadbalancer.RoundRobinLoadBalancer
