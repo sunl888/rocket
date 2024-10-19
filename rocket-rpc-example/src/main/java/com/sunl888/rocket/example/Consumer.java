@@ -23,9 +23,6 @@ public class Consumer {
     static void genProviderConfig() {
         // 配置文件
         System.setProperty("rocket.registry.address", "127.0.0.1:2181");
-
-//        System.setProperty("rocket.provider.host", "127.0.0.1");
-//        System.setProperty("rocket.provider.port", "8080");
         System.setProperty("rocket.provider.version", "prod-1.0.0");
     }
 
@@ -41,6 +38,5 @@ public class Consumer {
         ServiceProxy serviceProxy = ServiceProxyFactory.getServiceProxy(configManager.getRocketConfig().getProxy());
         EchoService echoService = serviceProxy.createProxy(EchoService.class, new MethodInterceptorImpl());
         System.out.println(echoService.echo("你好"));
-        ;
     }
 }
