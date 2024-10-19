@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 public enum RetryEnum {
-    NOT_RETRY(0, "不重试"),
+    NOT_RETRY(0, "not"),
     ;
     private final int code;
     private final String name;

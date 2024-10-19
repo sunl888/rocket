@@ -1,1 +1,2 @@
 jdk=com.sunl888.rocket.serialization.JdkSerializer
+fastjson2=com.sunl888.rocket.serialization.Fastjson2Serializer

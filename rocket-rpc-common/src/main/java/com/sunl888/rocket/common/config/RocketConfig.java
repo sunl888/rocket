@@ -16,7 +16,7 @@ public class RocketConfig {
 
     private String compressor = CompressorEnum.GZIP.getName();
 
-    private String serializer = SerializerEnum.FASTJSON.getName();
+    private String serializer = SerializerEnum.FASTJSON2.getName();
 
     private String invoker = InvokerEnum.Netty4.getName();
 

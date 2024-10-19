@@ -11,6 +11,7 @@ import java.util.Map;
 @Slf4j
 @Adaptive
 public class FailFastTolerant implements Tolerant {
+    public static final String NAME = "not";
 
     @Override
     public RpcResponse doTolerant(Map<String, Object> context, Exception e) {

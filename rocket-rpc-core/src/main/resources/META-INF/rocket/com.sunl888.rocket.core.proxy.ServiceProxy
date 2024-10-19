@@ -1,3 +1,2 @@
 jdk=com.sunl888.rocket.core.proxy.JdkServiceProxy
 cglib=com.sunl888.rocket.core.proxy.CglibServiceProxy
-javassist=com.sunl888.rocket.core.proxy.JavassistServiceProxy

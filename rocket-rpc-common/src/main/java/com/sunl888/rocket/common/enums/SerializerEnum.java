@@ -6,10 +6,7 @@ import lombok.Getter;
 @Getter
 public enum SerializerEnum {
     JDK(1, "jdk"),
-    HESSIAN(2, "hessian"),
-    PROTOBUF(3, "protobuf"),
-    FASTJSON(4, "fastjson"),
-    FASTJSON2(5, "fastjson2"),
+    FASTJSON2(2, "fastjson2"),
     ;
 
     private final int code;

@@ -44,9 +44,5 @@
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.javassist</groupId>
-            <artifactId>javassist</artifactId>
-        </dependency>
     </dependencies>
 </project>

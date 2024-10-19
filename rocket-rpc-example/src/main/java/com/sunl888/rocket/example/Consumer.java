@@ -26,7 +26,7 @@ public class Consumer {
 
 //        System.setProperty("rocket.provider.host", "127.0.0.1");
 //        System.setProperty("rocket.provider.port", "8080");
-//        System.setProperty("rocket.provider.version", "prod-1.0.0");
+        System.setProperty("rocket.provider.version", "prod-1.0.0");
     }
 
     static void invokeHelloService() {
@@ -40,6 +40,7 @@ public class Consumer {
         ConfigManager configManager = ConfigManager.getInstance();
         ServiceProxy serviceProxy = ServiceProxyFactory.getServiceProxy(configManager.getRocketConfig().getProxy());
         EchoService echoService = serviceProxy.createProxy(EchoService.class, new MethodInterceptorImpl());
-        echoService.echo("你好");
+        System.out.println(echoService.echo("你好"));
+        ;
     }
 }
