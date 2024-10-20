@@ -3,7 +3,6 @@ package com.sunl888.rocket.core.remoting.protocol;
 
 import com.sunl888.rocket.common.constants.ProtocolConstant;
 import com.sunl888.rocket.common.enums.MsgTypeEnum;
-import com.sunl888.rocket.common.exception.ProtocolException;
 import com.sunl888.rocket.common.model.RpcMessage;
 import com.sunl888.rocket.common.model.RpcRequest;
 import com.sunl888.rocket.common.model.RpcResponse;
@@ -33,7 +32,8 @@ public class ProtocolDecoder extends ByteToMessageDecoder {
         // 校验魔数
         byte magic = byteBuf.readByte();
         if (magic != ProtocolConstant.MAGIC) {
-            throw new ProtocolException("Magic不合法");
+            log.info("Magic不合法");
+            return;
         }
         // 读取版本
         byte version = byteBuf.readByte();

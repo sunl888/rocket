@@ -2,16 +2,13 @@ package com.sunl888.rocket.common.util;
 
 public class Banner {
     public static void serverStartup(int port) {
-        String banner = """
-                \n
+        String banner = """ 
                                                                                       \s
                 ,------.              ,--.            ,--.  ,------. ,------.  ,-----.\s
                 |  .--. ' ,---.  ,---.|  |,-. ,---. ,-'  '-.|  .--. '|  .--. ''  .--./\s
                 |  '--'.'| .-. || .--'|     /| .-. :'-.  .-'|  '--'.'|  '--' ||  |    \s
                 |  |\\  \\ ' '-' '\\ `--.|  \\  \\\\   --.  |  |  |  |\\  \\ |  | --' '  '--'\\\s
                 `--' '--' `---'  `---'`--'`--'`----'  `--'  `--' '--'`--'      `-----'\s
-                \n
-                RocketRPC 服务启动中.....
                 """;
         System.out.println(banner);
         System.out.println("RocketRPC 服务启动完成，端口: " + port);

@@ -74,10 +74,10 @@ public class NettyClientHandler extends SimpleChannelInboundHandler<RpcMessage<?
 
                 ctx.channel().writeAndFlush(new RpcMessage<>(header, null))
                         .addListener(future -> {
-                            if (!future.isSuccess()) {
-                                log.warn("心跳发送失败: {}", future.cause().getMessage());
-                            } else {
+                            if (future.isSuccess()) {
                                 log.info("心跳发送成功 [{}]", ctx.channel().remoteAddress());
+                            } else {
+                                log.warn("心跳发送失败: {}", future.cause().getMessage());
                             }
                         });
             }

@@ -17,11 +17,13 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
+import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.concurrent.DefaultEventExecutorGroup;
 import lombok.extern.slf4j.Slf4j;
 import org.dromara.hutool.core.thread.ThreadUtil;
 
 import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.TimeUnit;
 
 @Slf4j
 public class NettyServer implements Server {
@@ -42,7 +44,7 @@ public class NettyServer implements Server {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             socketChannel.pipeline()
-//                                    .addLast(new IdleStateHandler(30, 0, 0, TimeUnit.SECONDS))
+//                                    .addLast(new IdleStateHandler(10, 20, 60, TimeUnit.SECONDS))
                                     .addLast(new ProtocolEncoder())
                                     .addLast(new ProtocolDecoder())
                                     .addLast(serverHandlerGroup, new NettyServerHandler());
